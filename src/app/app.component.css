@@ -1,0 +1,103 @@
+.gra {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.sekcja  {
+    flex: 1;
+    align-self: center;
+    justify-content: center;
+}
+
+.lewa-sekcja {
+    display: flex;
+}
+
+.tytul {
+    font-size: 68px;
+    color: whitesmoke;
+    margin-bottom: 35px;
+}
+
+.przycisk {
+    font-size: 22px;
+    border-radius: 15px;
+    padding: 10px;
+    width: 200px;
+    margin-top: 35px;
+}
+
+.przycisk:active, .przycisk:focus {
+    outline: none;
+}
+
+.instrukcja {
+    color: whitesmoke;
+    font-size: 20px;
+    width: 80%;
+    margin-top: 35px;
+}
+
+.input {
+    border-radius: 15px;
+    height: 35px;
+    text-align: center;
+    font-size: 26px;
+    margin-top: 35px;
+    width: 100%;
+}
+
+.input:active, .input:focus {
+    outline: none;
+}
+
+img {
+    width: 80%;
+    transform: rotate(-15deg);
+    display: flow-root;
+}
+
+.sekcja-przycisku {
+    display: flex;
+    justify-content: center;
+}
+
+.wygrana-tytul {
+    font-size: 60px;
+}
+
+.strefa-gry, 
+.wygrana {
+    width: 70%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+@media (max-width: 600px) {
+    .gra {
+        flex-direction: column;
+    }
+    .strefa-gry, 
+    .wygrana,
+    .instrukcja {
+        width: 100%;
+    }
+    .tytul {
+        font-size: 60px;
+        text-align: center;
+        margin-top: 20px;
+    }
+    .wygrana-tytul {
+        text-align: center;
+    }
+}

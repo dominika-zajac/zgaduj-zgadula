@@ -1,0 +1,43 @@
+<div class="gra">
+  <div class="sekcja lewa-sekcja">
+      <img src="../assets/stworek.png"/>
+  </div>
+  <div class="sekcja prawa-sekcja">
+    <div class="tytul">Zgaduj-zgadula!</div>
+    <div class="instrukcja" *ngIf="!czyTrwaGra && !czyWygrana">
+        <p>Zasady są proste!</p>
+        <p>Za chwilę pomyślę o jakiejś liczbie a Twoim zadaniem będzie ją odgadnąć. Liczba jest większa niż 1 i mniejsza niż 50.</p>
+        <p>Jeżeli odgadniesz moją liczbę - wygrasz!</p>
+        <p>Jeżeli nie, to powiem Ci czy moja liczba jest mniejsza czy większa od tej, którą podałeś</p>
+        <p class="sekcja-przycisku">
+          <button class="przycisk" (click)="rozpocznijGre()">
+            Zaczynamy!
+          </button>
+        </p>
+    </div>
+    <div class="wygrana" *ngIf="czyWygrana">
+      <div class="wygrana-tytul">
+          Gratulacje, wygrałeś!
+      </div>
+      <p class="sekcja-przycisku">
+        <button class="przycisk" (click)="rozpocznijGre()">
+          Zagraj jeszcze raz!
+        </button>
+      </p>
+    </div>
+    <div class="strefa-gry" *ngIf="czyTrwaGra">
+      <div class="za-duza-liczba">
+        {{podpowiedz}}
+      </div>
+      <div class="nowa-liczba">
+        Podaj nową liczbę:
+      </div>
+      <input type="number" [(ngModel)]="wpisanaLiczba" class="input"><br/>
+      <p class="sekcja-przycisku">
+        <button class="przycisk" (click)="sprawdzLiczbe()">
+        Sprawdzam!
+      </button>
+      </p>
+    </div>
+  </div>
+</div>
