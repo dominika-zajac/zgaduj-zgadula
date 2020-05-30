@@ -4,7 +4,7 @@ html {
 }
 
 body {
-    background-image: url('./assets/background.png');
+    background-image: url('https://github.com/dominika-zajac/zgaduj-zgadula/blob/step-2/src/assets/background.png?raw=true');
     height: 100%;
     font-family: fantasy;
     color: whitesmoke;
