@@ -1,6 +1,7 @@
 <div class="gra">
   <div class="sekcja lewa-sekcja">
-      <img src="../assets/stworek.png"/>
+    <!-- Jakiego elementu HTML użyjesz aby wyświetlić obrazek ze stworkiem?
+    Obrazek znajduje się jest pod adresem: "../assets/stworek.png" -->
   </div>
   <div class="sekcja prawa-sekcja">
     <div class="tytul">Zgaduj-zgadula!</div>
@@ -10,9 +11,8 @@
         <p>Jeżeli odgadniesz moją liczbę - wygrasz!</p>
         <p>Jeżeli nie, to powiem Ci czy moja liczba jest mniejsza czy większa od tej, którą podałeś</p>
         <p class="sekcja-przycisku">
-          <button class="przycisk" (click)="rozpocznijGre()">
-            Zaczynamy!
-          </button>
+          <!-- Jakiego elementu użyjesz aby stworzyć przycisk "Zacznij"?
+          Powinien on mieć klasę "przycisk" i po kliknięciu wywoływać funkcję "rozpocznijGre()" -->
         </p>
     </div>
     <div class="wygrana" *ngIf="czyWygrana">
@@ -20,23 +20,23 @@
           Gratulacje, wygrałeś!
       </div>
       <p class="sekcja-przycisku">
-        <button class="przycisk" (click)="rozpocznijGre()">
-          Zagraj jeszcze raz!
-        </button>
+         <!-- Jakiego elementu użyjesz aby stworzyć przycisk "Zagraj jeszcze raz"?
+          Powinien on mieć klasę "przycisk" i po kliknięciu wywoływać funkcję "rozpocznijGre()" -->
       </p>
     </div>
     <div class="strefa-gry" *ngIf="czyTrwaGra">
-      <div class="za-duza-liczba">
-        {{podpowiedz}}
-      </div>
+      <!-- Jakiego elementu użyjesz aby wyświetlić podpowiedź? 
+      Treść podpowiedzi ukrywa się pod {{podpowiedz}} -->
       <div class="nowa-liczba">
         Podaj nową liczbę:
       </div>
-      <input type="number" [(ngModel)]="wpisanaLiczba" class="input"><br/>
+      <!-- Jakiego elementu użyjesz aby stworzyć miejsce do wpisania liczby przez gracza?
+      Powinien on mieć klasę "input", typ "number" i parametr [(ngModel)]="wpisanaLiczba" 
+      (dzięki któremu wpisana przez gracza liczba będzie dostępna w funkcjach pod zmienną wpisanaLiczba) -->
+      <br/>
       <p class="sekcja-przycisku">
-        <button class="przycisk" (click)="sprawdzLiczbe()">
-        Sprawdzam!
-      </button>
+        <!-- Jakiego elementu użyjesz aby stworzyć przycisk "Sprawdzam"?
+          Powinien on mieć klasę "przycisk" i po kliknięciu wywoływać funkcję "sprawdzLiczbe()" -->
       </p>
     </div>
   </div>
